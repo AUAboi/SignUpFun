@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
-
+    tools:context=".SignUpActivity">]
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:id="@+id/layoutMain"
+        android:layout_height="match_parent">
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -17,8 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="30dp"
-            android:paddingBottom="30dp">
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
             <TextView
                 android:id="@+id/textView"
@@ -50,15 +57,12 @@
                     style="@style/AppInputLabel"
                     android:layout_width="145dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="TextView"
-                    tools:text="@string/prompt_name" />
+                    android:text="@string/prompt_name" />
 
                 <EditText
-                    android:id="@+id/editTextText2"
+                    android:id="@+id/editTextTextName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:autofillHints=""
                     android:ems="10"
                     android:imeActionLabel="Name"
@@ -101,8 +105,7 @@
                 android:orientation="horizontal"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                android:paddingBottom="20dp"
-                >
+                android:paddingBottom="20dp">
 
                 <TextView
                     android:id="@+id/textView7"
@@ -163,13 +166,13 @@
                     style="@style/AppInputLabel"
                     android:layout_width="124dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="@string/prompt_gender" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="29dp"
                     android:layout_weight="1"
+                    android:id="@+id/genderRadioGroup"
                     android:orientation="horizontal">
 
                     <RadioButton
@@ -204,21 +207,21 @@
                     android:text="@string/prompt_sports" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/checkBoxSportsA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/sport_a" />
 
                 <CheckBox
-                    android:id="@+id/checkBox2"
+                    android:id="@+id/checkBoxSportsB"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/sport_b" />
 
                 <CheckBox
-                    android:id="@+id/checkBox3"
+                    android:id="@+id/checkBoxSportsC"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -237,7 +240,7 @@
                 <TextView
                     android:id="@+id/textView9"
                     style="@style/AppInputLabel"
-                    android:layout_width="wrap_content"
+                    android:layout_width="134dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/prompt_dob" />
@@ -263,20 +266,128 @@
                 <TextView
                     android:id="@+id/textView10"
                     style="@style/AppInputLabel"
-                    android:layout_width="wrap_content"
+                    android:layout_width="131dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/prompt_dob" />
+                    android:text="@string/prompt_city" />
 
                 <EditText
-                    android:id="@+id/editTextText"
+                    android:id="@+id/editTextTextCity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="text"
-                    android:text="Name" />
+                    android:inputType="text" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    style="@style/AppInputLabel"
+                    android:layout_width="131dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/prompt_country" />
+
+                <EditText
+                    android:id="@+id/editTextTextCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    style="@style/AppInputLabel"
+                    android:layout_width="293dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/prompt_skills" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_weight="1"
+                    android:id="@+id/skillRadioGroup"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/skill_a" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/skill_b" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp">
+
+                <CheckBox
+                    android:id="@+id/checkBoxTC"
+                    style="@style/AppInputLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/prompt_tc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:onClick="verifyDetails"
+                    android:text="Submit" />
+
+                <Button
+                    android:id="@+id/buttonClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Clear" />
             </LinearLayout>
 
         </LinearLayout>

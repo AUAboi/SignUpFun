@@ -18,4 +18,6 @@
     <string name="sport_a">Cricket</string>
     <string name="sport_b">Hockey</string>
     <string name="sport_c">Football</string>
+    <string name="skill_a">Beginner</string>
+    <string name="skill_b">Advanced</string>
 </resources>
