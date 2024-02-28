@@ -117,4 +117,23 @@ public class SignUpActivity extends AppCompatActivity {
 
         snackbar.show();
     }
+
+    public void clearAll(View view) {
+        nameField.getText().clear();
+        emailField.getText().clear();
+        dateField.getText().clear();
+        cityField.getText().clear();
+        countryField.getText().clear();
+        passwordField.getText().clear();
+        passwordConfirmField.getText().clear();
+
+        genderGroup.clearCheck();
+        skillGroup.clearCheck();
+
+        sportsACheckbox.setChecked(false);
+        sportsBCheckbox.setChecked(false);
+        sportsCCheckbox.setChecked(false);
+
+        tcCheckbox.setChecked(false);
+    }
 }
